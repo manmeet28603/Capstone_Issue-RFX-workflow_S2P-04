@@ -1,8 +1,3 @@
-"""
-AutoGen-based Audit Logger Agent
-Logs workflow events using AutoGen framework
-"""
-
 import json
 from pathlib import Path
 from datetime import datetime
@@ -10,27 +5,15 @@ from typing import Dict, Any
 
 
 class AuditLoggerAgentAutogen:
-    """
-    Audit Logger Agent using AutoGen framework
-    """
     
     def __init__(self, base_path: str, llm_config: Dict[str, Any]):
-        """
-        Initialize Audit Logger Agent
-        
-        Args:
-            base_path: Base path to workflow data
-            llm_config: LLM configuration for AutoGen
-        """
         self.base_path = Path(base_path)
         self.agent_id = "Audit_Logger_Agent"
         self.llm_config = llm_config
     
     def _collect_workflow_events(self) -> list:
-        """Collect events from all workflow outputs"""
         events = []
         
-        # Template Builder event
         try:
             template_path = self.base_path / "Template_Builder_Agent/Outputs/customized_rfx_template.json"
             if template_path.exists():
@@ -49,7 +32,6 @@ class AuditLoggerAgentAutogen:
         except Exception:
             pass
         
-        # Content Generation event
         try:
             content_path = self.base_path / "Content_Generation_Agent/Outputs/drafted_rfx_document.json"
             if content_path.exists():
@@ -68,7 +50,6 @@ class AuditLoggerAgentAutogen:
         except Exception:
             pass
         
-        # Distribution event
         try:
             dist_path = self.base_path / "Distribution_Agent/Outputs/distribution_status.json"
             if dist_path.exists():
@@ -90,19 +71,11 @@ class AuditLoggerAgentAutogen:
         return events
     
     def execute(self) -> Dict[str, Any]:
-        """
-        Execute audit logging
-        
-        Returns:
-            Result with audit trail
-        """
         print(f"\n→ {self.agent_id}: Creating audit trail...")
         
         try:
-            # Collect events
             events = self._collect_workflow_events()
             
-            # Create audit trail
             audit_trail = {
                 "audit_timestamp": datetime.now().isoformat(),
                 "workflow_type": "Issue RFX",
@@ -112,7 +85,6 @@ class AuditLoggerAgentAutogen:
                 "insights": "All workflow steps completed successfully with full traceability."
             }
             
-            # Save output
             output_path = self.base_path / "Audit_Logger_Agent/Outputs/audit_trail.json"
             output_path.parent.mkdir(parents=True, exist_ok=True)
             with open(output_path, 'w') as f:
@@ -134,20 +106,9 @@ class AuditLoggerAgentAutogen:
 
 
 def create_audit_logger_function(base_path: str, llm_config: Dict[str, Any]):
-    """
-    Create function for AutoGen agent to call
-    
-    Args:
-        base_path: Base path to workflow data
-        llm_config: LLM configuration
-    
-    Returns:
-        Function that executes audit logging
-    """
     agent = AuditLoggerAgentAutogen(base_path, llm_config)
     
     def log_audit() -> str:
-        """Log workflow audit trail"""
         result = agent.execute()
         return json.dumps(result, indent=2)
     

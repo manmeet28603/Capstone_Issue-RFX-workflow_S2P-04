@@ -1,8 +1,3 @@
-"""
-AutoGen Configuration for RFX Workflow
-Centralizes all AutoGen settings and LLM configuration
-"""
-
 import os
 from dotenv import load_dotenv
 
@@ -10,19 +5,12 @@ load_dotenv()
 
 
 def get_llm_config():
-    """
-    Get LLM configuration for AutoGen agents
-    
-    Returns:
-        Dictionary with LLM configuration for Azure OpenAI
-    """
     api_key = os.getenv('openai_api_key')
     api_base = os.getenv('openai_api_base')
     api_version = os.getenv('openai_api_version', '2025-01-01-preview')
     engine_name = os.getenv('openai_engine_name', 'gpt-4o')
     
     if not api_key or not api_base:
-        # Return config that will trigger fallback behavior
         return {
             "config_list": [],
             "temperature": 0.7,
@@ -40,7 +28,7 @@ def get_llm_config():
             }
         ],
         "temperature": 0.7,
-        "cache_seed": 42,  # Enable caching for consistent results
+        "cache_seed": 42,
         "timeout": 120
     }
     

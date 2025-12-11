@@ -1,7 +1,3 @@
-"""
-Utility functions for RFX workflow agents
-"""
-
 import json
 from pathlib import Path
 from typing import Dict, Any, List
@@ -9,19 +5,6 @@ from datetime import datetime
 
 
 def load_json_file(file_path: str) -> Dict[str, Any]:
-    """
-    Load JSON file with error handling
-    
-    Args:
-        file_path: Path to JSON file
-        
-    Returns:
-        Parsed JSON data
-        
-    Raises:
-        FileNotFoundError: If file doesn't exist
-        json.JSONDecodeError: If file is not valid JSON
-    """
     path = Path(file_path)
     
     if not path.exists():
@@ -32,14 +15,6 @@ def load_json_file(file_path: str) -> Dict[str, Any]:
 
 
 def save_json_file(data: Dict[str, Any], file_path: str, indent: int = 2):
-    """
-    Save data to JSON file
-    
-    Args:
-        data: Data to save
-        file_path: Path to save file
-        indent: JSON indentation level
-    """
     path = Path(file_path)
     path.parent.mkdir(parents=True, exist_ok=True)
     
@@ -49,17 +24,6 @@ def save_json_file(data: Dict[str, Any], file_path: str, indent: int = 2):
 
 def validate_sap_field(field_name: str, field_value: Any, 
                        sap_dictionary: Dict[str, str]) -> bool:
-    """
-    Validate SAP field against dictionary
-    
-    Args:
-        field_name: SAP field name
-        field_value: Field value
-        sap_dictionary: SAP field dictionary
-        
-    Returns:
-        True if field is valid
-    """
     if field_name not in sap_dictionary:
         return False
     
@@ -71,17 +35,6 @@ def validate_sap_field(field_name: str, field_value: Any,
 
 def generate_rfx_id(company_code: str, material_code: str, 
                     doc_type: str = "RFP") -> str:
-    """
-    Generate RFX identifier
-    
-    Args:
-        company_code: Company/BUKRS code
-        material_code: Material code
-        doc_type: Document type (RFP, RFQ, RFI)
-        
-    Returns:
-        Generated RFX ID
-    """
     year = datetime.now().year
     day_of_year = datetime.now().strftime('%j')
     
@@ -92,15 +45,6 @@ def generate_rfx_id(company_code: str, material_code: str,
 
 
 def format_timestamp(iso_timestamp: str = None) -> str:
-    """
-    Format timestamp for display
-    
-    Args:
-        iso_timestamp: ISO format timestamp (optional)
-        
-    Returns:
-        Formatted timestamp string
-    """
     if iso_timestamp:
         dt = datetime.fromisoformat(iso_timestamp.replace('Z', '+00:00'))
     else:
@@ -110,16 +54,6 @@ def format_timestamp(iso_timestamp: str = None) -> str:
 
 
 def calculate_success_rate(total: int, successful: int) -> float:
-    """
-    Calculate success rate percentage
-    
-    Args:
-        total: Total count
-        successful: Successful count
-        
-    Returns:
-        Success rate as percentage
-    """
     if total == 0:
         return 0.0
     

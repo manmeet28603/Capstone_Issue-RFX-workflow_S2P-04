@@ -1,8 +1,3 @@
-"""
-Orchestration Agent with Exception Handling
-Coordinates all RFX workflow agents and handles exceptions using AutoGen framework
-"""
-
 import json
 from pathlib import Path
 from datetime import datetime
@@ -10,29 +5,17 @@ from typing import Dict, Any, List
 
 
 class OrchestrationAgent:
-    """
-    Master orchestrator for RFX workflow with comprehensive exception handling
-    """
     
     def __init__(self, base_path: str, llm_config: Dict[str, Any] = None):
-        """
-        Initialize Orchestration Agent
-        
-        Args:
-            base_path: Base path to workflow data
-            llm_config: LLM configuration for AutoGen
-        """
         self.base_path = Path(base_path)
         self.agent_id = "Orchestration_Agent"
         self.llm_config = llm_config or {}
         
-        # Import agents
         from agents.template_builder_agent import create_template_builder_function
         from agents.content_generation_agent import create_content_generation_function
         from agents.distribution_agent import create_distribution_function
         from agents.audit_logger_agent import create_audit_logger_function
         
-        # Create agent functions
         self.template_builder = create_template_builder_function(str(base_path), llm_config)
         self.content_generator = create_content_generation_function(str(base_path), llm_config)
         self.distributor = create_distribution_function(str(base_path), llm_config)
@@ -43,12 +26,6 @@ class OrchestrationAgent:
         self.stakeholder_requests = []
     
     def validate_inputs(self) -> Dict[str, Any]:
-        """
-        Validate that all required input files exist
-        
-        Returns:
-            Validation result with status and missing files
-        """
         required_files = [
             self.base_path / "company_profile.json",
             self.base_path / "sap_field_dictionary.json",
@@ -69,15 +46,6 @@ class OrchestrationAgent:
         }
     
     def validate_template_output(self, template_result: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Validate template builder output
-        
-        Args:
-            template_result: Result from template builder
-            
-        Returns:
-            Validation result with issues found
-        """
         issues = []
         
         if template_result.get('status') != 'success':
@@ -97,15 +65,6 @@ class OrchestrationAgent:
         }
     
     def validate_content_output(self, content_result: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Validate content generation output
-        
-        Args:
-            content_result: Result from content generator
-            
-        Returns:
-            Validation result with issues found
-        """
         issues = []
         
         if content_result.get('status') != 'success':
@@ -114,17 +73,14 @@ class OrchestrationAgent:
         data = content_result.get('data', {})
         header = data.get('header', {})
         
-        # Validate mandatory SAP fields
         mandatory_fields = ['BUKRS', 'EKORG', 'EKGRP', 'BSART']
         for field in mandatory_fields:
             if field not in header or not header[field]:
                 issues.append(f'Missing mandatory SAP field: {field}')
         
-        # Validate line items
         if not data.get('items'):
             issues.append('No line items generated')
         
-        # Validate sections
         if not data.get('sections'):
             issues.append('Missing content sections')
         
@@ -135,15 +91,6 @@ class OrchestrationAgent:
         }
     
     def validate_distribution_output(self, dist_result: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Validate distribution output
-        
-        Args:
-            dist_result: Result from distributor
-            
-        Returns:
-            Validation result with issues found
-        """
         issues = []
         
         if dist_result.get('status') != 'success':
@@ -159,20 +106,10 @@ class OrchestrationAgent:
         return {
             'valid': len(issues) == 0,
             'issues': issues,
-            'requires_stakeholder': False  # Distribution issues don't need stakeholder input
+            'requires_stakeholder': False
         }
     
     def request_stakeholder_clarification(self, agent_id: str, issues: List[str]) -> Dict[str, Any]:
-        """
-        Request clarification from stakeholder for exceptions
-        
-        Args:
-            agent_id: Agent that encountered the issue
-            issues: List of issues found
-            
-        Returns:
-            Stakeholder request record
-        """
         request = {
             'request_id': f"REQ-{datetime.now().strftime('%Y%m%d%H%M%S')}",
             'timestamp': datetime.now().isoformat(),
@@ -198,17 +135,6 @@ class OrchestrationAgent:
     
     def handle_exception(self, agent_id: str, result: Dict[str, Any], 
                         validation: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Handle exception with stakeholder interaction
-        
-        Args:
-            agent_id: Agent that encountered exception
-            result: Agent execution result
-            validation: Validation result
-            
-        Returns:
-            Exception handling result
-        """
         exception_record = {
             'timestamp': datetime.now().isoformat(),
             'agent_id': agent_id,
@@ -221,7 +147,6 @@ class OrchestrationAgent:
         
         self.exceptions.append(exception_record)
         
-        # Request stakeholder clarification if needed
         if validation.get('requires_stakeholder'):
             request = self.request_stakeholder_clarification(
                 agent_id, 
@@ -235,7 +160,6 @@ class OrchestrationAgent:
         return exception_record
     
     def copy_data_between_agents(self):
-        """Copy output from one agent to input of next agent"""
         
         # Template Builder → Content Generator
         source = self.base_path / "Template_Builder_Agent/Outputs/customized_rfx_template.json"
@@ -247,7 +171,6 @@ class OrchestrationAgent:
             with open(target, 'w') as f:
                 json.dump(data, f, indent=2)
         
-        # Content Generator → Distributor
         source = self.base_path / "Content_Generation_Agent/Outputs/drafted_rfx_document.json"
         target = self.base_path / "Distribution_Agent/Inputs/drafted_rfx_from_CGA.json"
         if source.exists():
@@ -258,12 +181,6 @@ class OrchestrationAgent:
                 json.dump(data, f, indent=2)
     
     def execute(self) -> Dict[str, Any]:
-        """
-        Execute complete RFX workflow with exception handling
-        
-        Returns:
-            Workflow execution result
-        """
         print("\nValidating workflow inputs...")
         input_validation = self.validate_inputs()
         

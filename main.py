@@ -1,22 +1,13 @@
-"""
-Main RFX Workflow Execution with AutoGen Framework
-Orchestrates multi-agent workflow using Microsoft AutoGen
-"""
-
 import json
 import sys
 from pathlib import Path
 from datetime import datetime
 
-# Import AutoGen configuration
 from autogen_config import get_llm_config
-
-# Import orchestration agent
 from agents.orchestration_agent import create_orchestration_function
 
 
 def print_banner():
-    """Print application banner"""
     print("\n" + "="*70)
     print(" "*10 + "RFX WORKFLOW AUTOMATION SYSTEM - AUTOGEN")
     print(" "*10 + "Source-to-Pay (S2P) - Issue RFX Process")
@@ -31,23 +22,13 @@ def print_banner():
 
 
 def run_autogen_workflow():
-    """
-    Run RFX workflow using AutoGen framework with Orchestration Agent
-    
-    Returns:
-        Workflow execution result
-    """
-    # Get base path
     base_path = Path(__file__).parent / "Issue_RFX_Workflow_Data"
     
     if not base_path.exists():
         print(f"ERROR: Workflow data directory not found: {base_path}")
         return {"status": "error", "message": "Workflow data not found"}
     
-    # Get LLM configuration
     llm_config = get_llm_config()
-    
-    # Check if LLM is available
     has_llm = len(llm_config.get("config_list", [])) > 0
     
     if has_llm:
@@ -57,10 +38,7 @@ def run_autogen_workflow():
     
     print(f"Workflow Data Path: {base_path}\n")
     
-    # Create orchestration function
     run_orchestrated = create_orchestration_function(str(base_path), llm_config)
-    
-    # Execute orchestrated workflow
     result_str = run_orchestrated()
     result = json.loads(result_str)
     
@@ -68,7 +46,6 @@ def run_autogen_workflow():
 
 
 def print_summary(result: dict):
-    """Print workflow summary"""
     print("\n" + "="*70)
     print("WORKFLOW EXECUTION SUMMARY")
     print("="*70)

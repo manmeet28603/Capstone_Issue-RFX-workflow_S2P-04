@@ -1,9 +1,9 @@
 {
-  "execution_timestamp": "2025-12-11T09:46:30.169043",
+  "execution_timestamp": "2025-12-11T15:33:01.834616",
   "framework": "Microsoft AutoGen",
   "workflow_result": {
     "status": "success_with_warnings",
-    "rfx_id": "2000-GLYC-2025-RFP-108",
+    "rfx_id": "2000-GLYC-2025-RFP-790",
     "message": "RFX workflow completed with 1 warnings",
     "workflow_results": [
       {
@@ -46,7 +46,7 @@
     ],
     "exceptions": [
       {
-        "timestamp": "2025-12-11T09:46:30.136996",
+        "timestamp": "2025-12-11T15:33:01.812407",
         "agent_id": "Distribution_Agent",
         "error": {
           "message": "RFX distributed to 0 suppliers",
