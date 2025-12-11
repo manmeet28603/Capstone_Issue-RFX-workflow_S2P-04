@@ -1,12 +1,12 @@
 {
-  "rfx_id": "2000-GLYC-2025-RFP-333",
+  "rfx_id": "2000-GLYC-2025-RFP-400",
   "header": {
     "BUKRS": "2000",
     "EKORG": "PG01",
     "EKGRP": "CHE",
     "BSART": "AN",
     "WAERS": "USD",
-    "rfx_id": "2000-GLYC-2025-RFP-333"
+    "rfx_id": "2000-GLYC-2025-RFP-400"
   },
   "items": [
     {
@@ -56,6 +56,6 @@
       "DAP"
     ]
   },
-  "generated_timestamp": "2025-12-11T08:58:26.218270",
+  "generated_timestamp": "2025-12-11T09:37:46.494310",
   "docx_path": "Content_Generation_Agent/Outputs/drafted_rfx_document.docx"
 }

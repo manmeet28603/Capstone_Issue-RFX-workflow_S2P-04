@@ -1,32 +1,62 @@
 {
-  "execution_timestamp": "2025-12-11T08:58:26.254022",
+  "execution_timestamp": "2025-12-11T09:37:46.543036",
   "framework": "Microsoft AutoGen",
   "workflow_result": {
-    "status": "success",
-    "rfx_id": "2000-GLYC-2025-RFP-333",
-    "message": "RFX workflow completed successfully",
+    "status": "success_with_warnings",
+    "rfx_id": "2000-GLYC-2025-RFP-400",
+    "message": "RFX workflow completed with 1 warnings",
     "workflow_results": [
       {
-        "agent": "Template_Builder_Agent",
+        "agent_id": "Template_Builder_Agent",
         "status": "success",
-        "message": "Template customized successfully"
+        "message": "Template customized successfully",
+        "validation": {
+          "valid": true,
+          "issues": [],
+          "requires_stakeholder": false
+        }
       },
       {
-        "agent": "Content_Generation_Agent",
+        "agent_id": "Content_Generation_Agent",
         "status": "success",
-        "message": "RFX document drafted successfully"
+        "message": "RFX document drafted successfully",
+        "validation": {
+          "valid": true,
+          "issues": [],
+          "requires_stakeholder": false
+        }
       },
       {
-        "agent": "Distribution_Agent",
+        "agent_id": "Distribution_Agent",
         "status": "success",
-        "message": "RFX distributed to 0 suppliers"
+        "message": "RFX distributed to 0 suppliers",
+        "validation": {
+          "valid": false,
+          "issues": [
+            "No suppliers in distribution list"
+          ],
+          "requires_stakeholder": false
+        }
       },
       {
-        "agent": "Audit_Logger_Agent",
+        "agent_id": "Audit_Logger_Agent",
         "status": "success",
         "message": "Audit trail logged with 3 events"
       }
     ],
-    "framework": "AutoGen"
+    "exceptions": [
+      {
+        "timestamp": "2025-12-11T09:37:46.526092",
+        "agent_id": "Distribution_Agent",
+        "error": {
+          "message": "RFX distributed to 0 suppliers",
+          "issues": [
+            "No suppliers in distribution list"
+          ]
+        },
+        "resolution_status": "auto_resolved"
+      }
+    ],
+    "stakeholder_requests": []
   }
 }

@@ -43,8 +43,16 @@ The system consists of 5 specialized agents orchestrated to execute the RFX work
 #### 5. **Orchestration Agent**
 - Coordinates execution across all agents
 - Manages data flow between agents
-- Handles exceptions and error recovery
-- Validates inputs and outputs
+- **Exception Handling**: Detects, classifies, and resolves workflow issues
+- **Stakeholder Interaction**: Requests clarifications when needed
+- **Comprehensive Validation**: Validates inputs/outputs at each step
+- **Audit Trail**: Logs all exceptions and resolutions
+- **Exception Workflow**:
+  1. Detect issues in agent outputs
+  2. Classify severity and stakeholder need
+  3. Request clarification with unique ID
+  4. Track resolution status
+  5. Log all exceptions for compliance
 
 ## Technology Stack
 
@@ -153,6 +161,7 @@ This executes the full RFX workflow:
 
 ```
 ├── agents/                          # AutoGen-powered AI agents
+│   ├── orchestration_agent.py      # Master coordinator with exception handling
 │   ├── template_builder_agent.py   # Template selection
 │   ├── content_generation_agent.py # RFX document creation
 │   ├── distribution_agent.py       # Supplier distribution
@@ -164,6 +173,53 @@ This executes the full RFX workflow:
 ├── requirements.txt                # Dependencies
 └── README.md                       # Documentation
 ```
+
+## Exception Handling
+
+The Orchestration Agent provides comprehensive exception handling:
+
+### Exception Detection
+Validates outputs at each step:
+- **Template Builder**: Checks RFX ID, sections, and compliance
+- **Content Generation**: Validates mandatory SAP fields (BUKRS, EKORG, EKGRP, BSART), line items, and sections
+- **Distribution**: Verifies supplier count and delivery status
+
+### Exception Classification
+Determines severity and stakeholder need:
+- **Critical**: Missing mandatory SAP fields → Requires stakeholder input
+- **Warning**: No suppliers in distribution → Auto-resolved, logged only
+- **Error**: Agent failure → Workflow stops, exception logged
+
+### Stakeholder Request Workflow
+When issues require clarification:
+
+1. **Detection**: Orchestrator identifies validation failure
+2. **Request Generation**: Creates unique request ID (e.g., REQ-20251211093000)
+3. **User Notification**: Displays issues requiring clarification
+4. **Status Tracking**: Monitors resolution (pending/awaiting_stakeholder/auto_resolved)
+5. **Audit Logging**: Records all exceptions for compliance
+
+**Example Exception Output**:
+```
+⚠ EXCEPTION DETECTED - Content_Generation_Agent
+──────────────────────────────────────────────────────────────────────
+Request ID: REQ-20251211093000
+Issues found:
+  1. Missing mandatory SAP field: BUKRS
+  2. No line items generated
+
+→ Stakeholder clarification required
+→ Request logged for compliance
+──────────────────────────────────────────────────────────────────────
+```
+
+### Exception Records
+All exceptions are logged with:
+- Timestamp
+- Agent ID
+- Error details and issues list
+- Resolution status
+- Stakeholder request ID (if applicable)
 
 ## License
 
