@@ -1,0 +1,61 @@
+{
+  "rfx_id": "2000-GLYC-2025-RFP-333",
+  "header": {
+    "BUKRS": "2000",
+    "EKORG": "PG01",
+    "EKGRP": "CHE",
+    "BSART": "AN",
+    "WAERS": "USD",
+    "rfx_id": "2000-GLYC-2025-RFP-333"
+  },
+  "items": [
+    {
+      "item_number": "00010",
+      "MATNR": "GLYC-USP-001",
+      "description": "Glycerin - USP/Pharma",
+      "MENGE": "500.0",
+      "MEINS": "MT",
+      "delivery_plant": "US01",
+      "INCO1": "DDP",
+      "INCO2": "Cincinnati"
+    }
+  ],
+  "sections": {
+    "Scope of Work": "Supply of Glycerin as per specifications.",
+    "Technical Specifications": "Grade: USP/Pharma, Purity: N/A%",
+    "Quality & Compliance": "Must comply with: USP, FDA, REACH, RSPO",
+    "Delivery Terms": "Monthly 500 MT (\u00b110%)",
+    "Pricing Structure": "Please provide unit pricing in USD per MT",
+    "Payment Terms": "Net 60 days from invoice date"
+  },
+  "requirements": {
+    "material": "Glycerin",
+    "MATNR": "GLYC-USP-001",
+    "grade": "USP/Pharma",
+    "purity_min_pct": 99.5,
+    "moisture_max_pct": 0.3,
+    "annual_volume_mt": 6000,
+    "delivery_schedule": "Monthly 500 MT (\u00b110%)",
+    "plants": [
+      "US01",
+      "IN01"
+    ],
+    "packaging": "Bulk tank trucks or ISO tanks",
+    "compliance": [
+      "USP",
+      "FDA",
+      "REACH",
+      "RSPO"
+    ],
+    "payment_terms_preferred": [
+      "0001",
+      "0002"
+    ],
+    "incoterms_preferred": [
+      "DDP",
+      "DAP"
+    ]
+  },
+  "generated_timestamp": "2025-12-11T08:58:26.218270",
+  "docx_path": "Content_Generation_Agent/Outputs/drafted_rfx_document.docx"
+}

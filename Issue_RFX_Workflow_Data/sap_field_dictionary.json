@@ -1,0 +1,17 @@
+{
+  "BUKRS": "Company Code (identifies accounting entity)",
+  "EKORG": "Purchasing Organization",
+  "EKGRP": "Purchasing Group",
+  "MATKL": "Material Group",
+  "WAERS": "Currency Key",
+  "WERKS": "Plant",
+  "BSART": "Purchasing Document Type (AN=RFQ/RFP/RFI)",
+  "LIFNR": "Vendor Account Number",
+  "MATNR": "Material Number",
+  "MENGE": "Item Quantity",
+  "MEINS": "Base Unit of Measure",
+  "INCO1": "Incoterms",
+  "INCO2": "Incoterms Location",
+  "ZTERM": "Payment Terms",
+  "NETPR": "Net Price"
+}

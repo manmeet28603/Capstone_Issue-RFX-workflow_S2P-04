@@ -1,0 +1,6 @@
+{
+  "provider": "MockMail",
+  "endpoint": "smtp://mock.local",
+  "status": "available",
+  "rate_limit": "1000 emails/min"
+}

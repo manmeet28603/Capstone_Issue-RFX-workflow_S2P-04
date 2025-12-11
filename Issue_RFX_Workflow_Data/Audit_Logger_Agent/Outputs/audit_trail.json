@@ -1,0 +1,39 @@
+{
+  "audit_timestamp": "2025-12-11T08:58:26.250115",
+  "workflow_type": "Issue RFX",
+  "total_events": 3,
+  "events": [
+    {
+      "event": "template_customized",
+      "agent": "Template_Builder_Agent",
+      "rfx_id": "2000-GLYC-2025-RFP-333",
+      "timestamp": "2025-12-11T08:58:26.199124",
+      "details": {
+        "template_id": "TPL-RFP-CHEM-GLYC-2023",
+        "category": "Chemicals"
+      }
+    },
+    {
+      "event": "rfx_drafted",
+      "agent": "Content_Generation_Agent",
+      "rfx_id": "2000-GLYC-2025-RFP-333",
+      "timestamp": "2025-12-11T08:58:26.218270",
+      "details": {
+        "line_items": 1,
+        "sections": 6
+      }
+    },
+    {
+      "event": "rfx_distributed",
+      "agent": "Distribution_Agent",
+      "rfx_id": "2000-GLYC-2025-RFP-333",
+      "timestamp": "2025-12-11T08:58:26.237808",
+      "details": {
+        "total_suppliers": 0,
+        "successfully_delivered": 0
+      }
+    }
+  ],
+  "compliance_status": "COMPLIANT",
+  "insights": "All workflow steps completed successfully with full traceability."
+}

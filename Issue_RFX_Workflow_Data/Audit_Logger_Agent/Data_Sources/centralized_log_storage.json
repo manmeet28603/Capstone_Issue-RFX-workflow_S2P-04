@@ -1,0 +1,5 @@
+{
+  "storage": "CloudBucket-mock",
+  "retention_days": 365,
+  "immutability": true
+}

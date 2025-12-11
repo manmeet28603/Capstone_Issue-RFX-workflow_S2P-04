@@ -1,0 +1,13 @@
+{
+  "Template_Builder_Agent": [
+    "Outputs/customized_rfx_template.docx",
+    "Outputs/customized_rfx_template.json"
+  ],
+  "Content_Generation_Agent": [
+    "Outputs/drafted_rfx_document.docx",
+    "Outputs/drafted_rfx_document.json"
+  ],
+  "Distribution_Agent": [
+    "Outputs/distribution_status.json"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "material": "Glycerin",
+  "MATNR": "GLYC-USP-001",
+  "grade": "USP/Pharma",
+  "purity_min_pct": 99.5,
+  "moisture_max_pct": 0.3,
+  "annual_volume_mt": 6000,
+  "delivery_schedule": "Monthly 500 MT (\u00b110%)",
+  "plants": [
+    "US01",
+    "IN01"
+  ],
+  "packaging": "Bulk tank trucks or ISO tanks",
+  "compliance": [
+    "USP",
+    "FDA",
+    "REACH",
+    "RSPO"
+  ],
+  "payment_terms_preferred": [
+    "0001",
+    "0002"
+  ],
+  "incoterms_preferred": [
+    "DDP",
+    "DAP"
+  ]
+}

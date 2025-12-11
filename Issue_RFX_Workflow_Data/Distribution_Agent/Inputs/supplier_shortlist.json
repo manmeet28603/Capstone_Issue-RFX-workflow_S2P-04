@@ -1,0 +1,369 @@
+{
+  "rfx_id": "PG-GLYC-2025-RFP-004",
+  "suppliers": [
+    {
+      "LIFNR": "420017",
+      "NAME1": "Glycerin Supplier 420017",
+      "LAND1": "TH",
+      "ZTERM": "0003",
+      "INCO1": "DDP",
+      "INCO2": "Manaus",
+      "WAERS": "USD",
+      "certifications": [
+        "ISO9001",
+        "RSPO",
+        "FDA"
+      ]
+    },
+    {
+      "LIFNR": "420039",
+      "NAME1": "Glycerin Supplier 420039",
+      "LAND1": "US",
+      "ZTERM": "0002",
+      "INCO1": "EXW",
+      "INCO2": "Medan",
+      "WAERS": "USD",
+      "certifications": [
+        "ISO9001",
+        "FDA",
+        "REACH"
+      ]
+    },
+    {
+      "LIFNR": "420006",
+      "NAME1": "Glycerin Supplier 420006",
+      "LAND1": "ID",
+      "ZTERM": "0003",
+      "INCO1": "DAP",
+      "INCO2": "Frankfurt",
+      "WAERS": "USD",
+      "certifications": [
+        "USP",
+        "RSPO",
+        "ISO9001"
+      ]
+    },
+    {
+      "LIFNR": "420025",
+      "NAME1": "Glycerin Supplier 420025",
+      "LAND1": "TH",
+      "ZTERM": "0001",
+      "INCO1": "DAP",
+      "INCO2": "Johor",
+      "WAERS": "USD",
+      "certifications": [
+        "RSPO",
+        "USP",
+        "ISO9001"
+      ]
+    },
+    {
+      "LIFNR": "420036",
+      "NAME1": "Glycerin Supplier 420036",
+      "LAND1": "US",
+      "ZTERM": "0001",
+      "INCO1": "EXW",
+      "INCO2": "Bengaluru",
+      "WAERS": "USD",
+      "certifications": [
+        "REACH",
+        "RSPO",
+        "USP"
+      ]
+    },
+    {
+      "LIFNR": "420021",
+      "NAME1": "Glycerin Supplier 420021",
+      "LAND1": "IN",
+      "ZTERM": "0002",
+      "INCO1": "EXW",
+      "INCO2": "Bangkok",
+      "WAERS": "USD",
+      "certifications": [
+        "FDA",
+        "REACH",
+        "ISO9001"
+      ]
+    },
+    {
+      "LIFNR": "420004",
+      "NAME1": "Glycerin Supplier 420004",
+      "LAND1": "DE",
+      "ZTERM": "0001",
+      "INCO1": "DAP",
+      "INCO2": "Cincinnati",
+      "WAERS": "USD",
+      "certifications": [
+        "USP",
+        "REACH",
+        "ISO9001"
+      ]
+    },
+    {
+      "LIFNR": "420023",
+      "NAME1": "Glycerin Supplier 420023",
+      "LAND1": "DE",
+      "ZTERM": "0003",
+      "INCO1": "DAP",
+      "INCO2": "Bengaluru",
+      "WAERS": "USD",
+      "certifications": [
+        "FDA",
+        "ISO9001",
+        "RSPO"
+      ]
+    },
+    {
+      "LIFNR": "420035",
+      "NAME1": "Glycerin Supplier 420035",
+      "LAND1": "US",
+      "ZTERM": "0001",
+      "INCO1": "EXW",
+      "INCO2": "Frankfurt",
+      "WAERS": "USD",
+      "certifications": [
+        "RSPO",
+        "USP",
+        "ISO9001"
+      ]
+    },
+    {
+      "LIFNR": "420018",
+      "NAME1": "Glycerin Supplier 420018",
+      "LAND1": "MY",
+      "ZTERM": "0001",
+      "INCO1": "EXW",
+      "INCO2": "Bangkok",
+      "WAERS": "USD",
+      "certifications": [
+        "RSPO",
+        "FDA",
+        "REACH"
+      ]
+    },
+    {
+      "LIFNR": "420037",
+      "NAME1": "Glycerin Supplier 420037",
+      "LAND1": "BR",
+      "ZTERM": "0002",
+      "INCO1": "DAP",
+      "INCO2": "Frankfurt",
+      "WAERS": "USD",
+      "certifications": [
+        "FDA",
+        "USP",
+        "RSPO"
+      ]
+    },
+    {
+      "LIFNR": "420026",
+      "NAME1": "Glycerin Supplier 420026",
+      "LAND1": "ID",
+      "ZTERM": "0003",
+      "INCO1": "DDP",
+      "INCO2": "Bangkok",
+      "WAERS": "USD",
+      "certifications": [
+        "FDA",
+        "RSPO",
+        "ISO9001"
+      ]
+    },
+    {
+      "LIFNR": "420030",
+      "NAME1": "Glycerin Supplier 420030",
+      "LAND1": "MY",
+      "ZTERM": "0002",
+      "INCO1": "DAP",
+      "INCO2": "Medan",
+      "WAERS": "USD",
+      "certifications": [
+        "USP",
+        "ISO9001",
+        "REACH"
+      ]
+    },
+    {
+      "LIFNR": "420020",
+      "NAME1": "Glycerin Supplier 420020",
+      "LAND1": "ID",
+      "ZTERM": "0003",
+      "INCO1": "EXW",
+      "INCO2": "Bangkok",
+      "WAERS": "USD",
+      "certifications": [
+        "RSPO",
+        "ISO9001",
+        "FDA"
+      ]
+    },
+    {
+      "LIFNR": "420005",
+      "NAME1": "Glycerin Supplier 420005",
+      "LAND1": "ID",
+      "ZTERM": "0003",
+      "INCO1": "EXW",
+      "INCO2": "Manaus",
+      "WAERS": "USD",
+      "certifications": [
+        "USP",
+        "RSPO",
+        "REACH"
+      ]
+    },
+    {
+      "LIFNR": "420038",
+      "NAME1": "Glycerin Supplier 420038",
+      "LAND1": "US",
+      "ZTERM": "0001",
+      "INCO1": "EXW",
+      "INCO2": "Johor",
+      "WAERS": "USD",
+      "certifications": [
+        "ISO9001",
+        "REACH",
+        "RSPO"
+      ]
+    },
+    {
+      "LIFNR": "420003",
+      "NAME1": "Glycerin Supplier 420003",
+      "LAND1": "BR",
+      "ZTERM": "0002",
+      "INCO1": "EXW",
+      "INCO2": "Manaus",
+      "WAERS": "USD",
+      "certifications": [
+        "USP",
+        "ISO9001",
+        "FDA"
+      ]
+    },
+    {
+      "LIFNR": "420007",
+      "NAME1": "Glycerin Supplier 420007",
+      "LAND1": "US",
+      "ZTERM": "0002",
+      "INCO1": "DDP",
+      "INCO2": "Bengaluru",
+      "WAERS": "USD",
+      "certifications": [
+        "USP",
+        "FDA",
+        "ISO9001"
+      ]
+    },
+    {
+      "LIFNR": "420012",
+      "NAME1": "Glycerin Supplier 420012",
+      "LAND1": "DE",
+      "ZTERM": "0003",
+      "INCO1": "DDP",
+      "INCO2": "Frankfurt",
+      "WAERS": "USD",
+      "certifications": [
+        "RSPO",
+        "USP",
+        "FDA"
+      ]
+    },
+    {
+      "LIFNR": "420029",
+      "NAME1": "Glycerin Supplier 420029",
+      "LAND1": "ID",
+      "ZTERM": "0001",
+      "INCO1": "EXW",
+      "INCO2": "Bangkok",
+      "WAERS": "USD",
+      "certifications": [
+        "ISO9001",
+        "USP",
+        "FDA"
+      ]
+    },
+    {
+      "LIFNR": "420027",
+      "NAME1": "Glycerin Supplier 420027",
+      "LAND1": "BR",
+      "ZTERM": "0002",
+      "INCO1": "EXW",
+      "INCO2": "Bengaluru",
+      "WAERS": "USD",
+      "certifications": [
+        "FDA",
+        "USP",
+        "REACH"
+      ]
+    },
+    {
+      "LIFNR": "420031",
+      "NAME1": "Glycerin Supplier 420031",
+      "LAND1": "ID",
+      "ZTERM": "0003",
+      "INCO1": "DAP",
+      "INCO2": "Johor",
+      "WAERS": "USD",
+      "certifications": [
+        "FDA",
+        "REACH",
+        "USP"
+      ]
+    },
+    {
+      "LIFNR": "420008",
+      "NAME1": "Glycerin Supplier 420008",
+      "LAND1": "BR",
+      "ZTERM": "0002",
+      "INCO1": "DDP",
+      "INCO2": "Bangkok",
+      "WAERS": "USD",
+      "certifications": [
+        "ISO9001",
+        "REACH",
+        "FDA"
+      ]
+    },
+    {
+      "LIFNR": "420016",
+      "NAME1": "Glycerin Supplier 420016",
+      "LAND1": "MY",
+      "ZTERM": "0001",
+      "INCO1": "DAP",
+      "INCO2": "Bangkok",
+      "WAERS": "USD",
+      "certifications": [
+        "RSPO",
+        "REACH",
+        "FDA"
+      ]
+    },
+    {
+      "LIFNR": "420015",
+      "NAME1": "Glycerin Supplier 420015",
+      "LAND1": "ID",
+      "ZTERM": "0002",
+      "INCO1": "DDP",
+      "INCO2": "Manaus",
+      "WAERS": "USD",
+      "certifications": [
+        "USP",
+        "REACH",
+        "FDA"
+      ]
+    },
+    {
+      "LIFNR": "420028",
+      "NAME1": "Glycerin Supplier 420028",
+      "LAND1": "BR",
+      "ZTERM": "0002",
+      "INCO1": "EXW",
+      "INCO2": "Medan",
+      "WAERS": "USD",
+      "certifications": [
+        "FDA",
+        "RSPO",
+        "USP"
+      ]
+    }
+  ]
+}

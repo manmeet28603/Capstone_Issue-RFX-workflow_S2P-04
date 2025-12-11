@@ -1,0 +1,10 @@
+# RFX Workflow Automation System - Python Dependencies
+
+# AutoGen Framework
+pyautogen>=0.2.0
+
+# Azure OpenAI Integration
+openai>=1.0.0
+
+# Environment Management
+python-dotenv>=1.0.0

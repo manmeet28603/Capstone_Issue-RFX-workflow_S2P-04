@@ -1,0 +1,21 @@
+{
+  "template_id": "TPL-RFP-SOLV-PG-2022",
+  "title": "Historical RFP \u2013 Industrial Solvents (PG)",
+  "category": "Chemicals",
+  "MATKL": "CHEM",
+  "BSART": "AN",
+  "version": "2.5",
+  "docx_path": "Template_Builder_Agent/Data_Sources/historical_templates/TPL-RFP-SOLV-PG-2022.docx",
+  "mandatory_sections": [
+    "Scope",
+    "Specifications",
+    "Logistics"
+  ],
+  "validation": {
+    "template_compliance": true,
+    "missing_sections": [],
+    "validation_status": "pass",
+    "agent_id": "Template_Builder_Agent",
+    "timestamp": "2025-12-01T17:57:57.395665"
+  }
+}
