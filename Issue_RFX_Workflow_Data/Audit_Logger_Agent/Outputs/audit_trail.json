@@ -1,13 +1,13 @@
 {
-  "audit_timestamp": "2025-12-11T15:33:01.817838",
+  "audit_timestamp": "2025-12-16T05:51:56.616385",
   "workflow_type": "Issue RFX",
   "total_events": 3,
   "events": [
     {
       "event": "template_customized",
       "agent": "Template_Builder_Agent",
-      "rfx_id": "2000-GLYC-2025-RFP-790",
-      "timestamp": "2025-12-11T15:33:01.718950",
+      "rfx_id": "2000-GLYC-2025-RFP-163",
+      "timestamp": "2025-12-16T05:51:56.571929",
       "details": {
         "template_id": "TPL-RFP-CHEM-GLYC-2023",
         "category": "Chemicals"
@@ -16,8 +16,8 @@
     {
       "event": "rfx_drafted",
       "agent": "Content_Generation_Agent",
-      "rfx_id": "2000-GLYC-2025-RFP-790",
-      "timestamp": "2025-12-11T15:33:01.744093",
+      "rfx_id": "2000-GLYC-2025-RFP-163",
+      "timestamp": "2025-12-16T05:51:56.587851",
       "details": {
         "line_items": 1,
         "sections": 6
@@ -26,8 +26,8 @@
     {
       "event": "rfx_distributed",
       "agent": "Distribution_Agent",
-      "rfx_id": "2000-GLYC-2025-RFP-790",
-      "timestamp": "2025-12-11T15:33:01.763425",
+      "rfx_id": "2000-GLYC-2025-RFP-163",
+      "timestamp": "2025-12-16T05:51:56.604904",
       "details": {
         "total_suppliers": 0,
         "successfully_delivered": 0

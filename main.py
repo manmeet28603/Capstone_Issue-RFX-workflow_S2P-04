@@ -17,10 +17,6 @@ def print_banner():
     print(f"Execution Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("="*70 + "\n")
 
-
-
-
-
 def run_autogen_workflow():
     base_path = Path(__file__).parent / "Issue_RFX_Workflow_Data"
     
@@ -131,8 +127,12 @@ def main():
         print(f"Execution report saved to: {report_path}")
         
         # Return exit code
-        if result.get('status') == 'success':
+        status = result.get('status', '').lower()
+        if status == 'success':
             print("\n✓ Workflow completed successfully!")
+            return 0
+        elif status == 'success_with_warnings':
+            print("\n⚠ Workflow completed with warnings.")
             return 0
         else:
             print("\n✗ Workflow completed with errors.")
